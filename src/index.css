@@ -1,0 +1,18 @@
+*
+{
+    margin: 0px;
+    top: 0px;
+    font-family: "Mali", cursive;
+    
+}
+.innerdiv
+{
+    width: 600px;
+}
+@media(max-width:600px)
+{
+    .innerdiv
+    {
+        width: 100%;
+    }
+}
