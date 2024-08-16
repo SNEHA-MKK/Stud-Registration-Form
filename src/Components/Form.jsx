@@ -99,7 +99,7 @@ function Form() {
         }
         // password validation
         // console.log(/^[a-zA-Z0-9!@#$%^&*]{6,16}$/);
-        if (!!value.match(/^.*(?=.{6,16})(?=.*[a-zA-Z])(?=.*\d)(?=.*[!#$%&? "]).*$/))
+        if (!!value.match(/^.*(?=.{6,10})(?=.*[a-zA-Z])(?=.*\d)(?=.*[!#$%&? "]).*$/))
         {
             if(name=='password')
             {
@@ -133,104 +133,7 @@ function Form() {
         }
   
         
-        // if(!!value.match(/^[a-zA-Z]+ [a-zA-Z]+$/))
-
-        // {
-        //     if(name=='firstName')
-        //     {
-        //         setFirstName(value)
-        //         setIsFirstNameInValid(false)
-        //     }
-        //     else if(name=='lastName')
-        //     {
-        //         setLastName(value)
-        //         setIsLastNameInValid(false)
-        //     }
-        //     else if(name=='address')
-        //     {
-        //         setAddress(value)
-        //         setIsAddressInValid(false)
-        //     }
-        //     else if(name=='mobileNumber')
-        //     {
-        //         setMobileNumber(value)
-        //         setIsMobileNumberInValid(false)
-        //     }
-        //     else if(name=='email')
-        //     {
-        //         setEmail(value)
-        //         setIsEmailInvalid(false)
-        //     }
-        //     else if(name=='password')
-        //     {
-        //         setPassword(value)
-        //         setIsPasswordInValid(false)
-        //     }
-        //     else if(name=='dob')
-        //     {
-        //         setDOB(value)
-        //         setIsDOBInValid(false)
-        //     }
-        //     else if(name=='gender')
-        //     {
-        //         setGender(value)
-        //         setIsGenderInValid(false)
-        //     }
-        //     else(name=='course')
-        //     {
-        //         setCourse(value)
-        //         setIsCourseInValid(false)
-        //     }
-
-        // }
-        // else
-        // {
-        //     if(name=='firstName')
-        //     {
-        //         setFirstName(value)
-        //         setIsFirstNameInValid(true)
-        //     }  
-        //     else if(name=='lastName')
-        //     {
-        //         setLastName(value)
-        //         setIsLastNameInValid(true)
-        //     }
-        //     else if(name=='address')
-        //     {
-        //         setAddress(value)
-        //         setIsAddressInValid(true)
-        //     }
-        //     else if(name=='mobilenumber')
-        //     {
-        //         setMobileNumber(value)
-        //         setIsMobileNumberInValid(true)
-        //     }
-        //     else if(name=='email')
-        //     {
-        //         setEmail(value)
-        //         setIsEmailInvalid(true)
-        //     }
-        //     else if(name=='password')
-        //     {
-        //         setPassword(value)
-        //         setIsPasswordInValid(true)
-        //     }
-        //     else if(name=='dob')
-        //     {
-        //         setDOB(value)
-        //         setIsDOBInValid(true)
-        //     }
-        //     else if(name=='gender')
-        //     {
-        //         setGender(value)
-        //         setIsGenderInValid(true)
-        //     }
-        //     else(name=='course')
-        //     {
-        //         setCourse(value)
-        //         setIsCourseInValid(true)
-        //     }
-        // }
+      
     }
     const handleInputChange = (e) => {
         const { name, value } = e.target;
@@ -263,7 +166,7 @@ function Form() {
         // console.log("ok");
         alert( 
             `   SUCCESSFULLY REGISTERED!!!
-                            STUDENT DETAILS  
+                             
                         FIRST NAME :${firstname}
                         LAST NAME : ${lastName}
                         ADDRESS :${address}
@@ -350,7 +253,7 @@ function Form() {
                 <div className="mb-3">
                 <TextField value={password || ""} onChange={e=>handleInputValidation(e.target)} name='password' type='password' id="outlined-basic" label="Password" variant="outlined" className='w-100' />
                 { isPasswordInValid &&
-                    <div className="ps-2 text-danger">Password should contain atleast one number(0-9),one alphabet and one special character(!@#$%^&*),length must from 6 to 16 </div>
+                    <div className="ps-2 text-danger">Password should contain atleast one number(0-9),length must be from 6 to 10,one alphabet and one special character(!@#$%^&*) is required </div>
                 }
                 </div>
                 <h6>Date of Birth</h6>
