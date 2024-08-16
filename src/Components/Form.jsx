@@ -307,7 +307,7 @@ function Form() {
        }
       
   return (
-<div style={{minHeight:'100vh',width:'100%'}} className='d-flex flex-column pt-3 align-items-center'>
+<div  style={{minHeight:'100vh',width:'100%'}} className='d-flex flex-column pt-3 align-items-center'>
     
     <div  className=" bg-transperant innerdiv p-5 rounded">
 
@@ -455,8 +455,9 @@ function Form() {
                 </div>
 
                 <Stack direction="row" spacing={2}>
-                <Button disabled={isFirstNameInValid || isLastNameInValid || isAddressInValid || isEmailInValid || isMobileNumberInValid || isPasswordInValid } onClick={handleRegister} color='success' style={{width:'50%',height:'70px' }} variant="contained">REGISTER</Button>
                 <Button style={{width:'50%',height:'70px' }} onClick={handleCancel} color='error' variant="outlined">CANCEL</Button>
+                <Button disabled={isFirstNameInValid || isLastNameInValid || isAddressInValid || isEmailInValid || isMobileNumberInValid || isPasswordInValid } onClick={handleRegister} color='success' style={{width:'50%',height:'70px' }} variant="contained">REGISTER</Button>
+                
                 </Stack>
     
             </form>
